@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: url(./assets/bgtestemed.svg)
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #efefef;
+  background-image: var(--bg);
+  /*background-position:top center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body *{
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  width: fit-content;
+  margin: 52px auto;
+  /*margin:auto;
+  padding-top:52px;*/
+}
+
+header {
+  margin-bottom: 63px;
+  text-align: center;
+}
+
+#cards {
+  display: flex; /*display: flex - deixa os cards lado a lado*/
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card {
+  padding: 32px 23px;
+  text-align: center ;
+
+  background: #662625; /* cor dos cards*/
+  border-bottom: 2px solid #F7DD43;
+  border-radius: 6px;
+}
+
+/*#b8860b dourado*/
+
+.card h2 {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+  padding: 8px 16px;
+  border: 1px solid #746615; /*borda dia,semana*/
+  border-radius: 6px;
+
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 10px;
+
+  color: #efefef ; /*cor do dia do jogo*/
+}
+
+.card h2 span {
+  color: #ffd700; /*Cor dos dias da semana*/
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 270px;
+}
+
+.card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card ul div + li {
+  padding-top: 24px;
+  border-top: 1px solid #ffd700; /*cor da divisória*/
+  padding-bottom: 5px;
+}
+
+.card ul li strong {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  color: #efefef ; /*cor dos horários*/
+  text-align: center;
+  margin: auto;
+  
+}
+
+.card h4 {
+  color: #b8860b; /*Cor dos grupos*/
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-inline: auto; /*grupo ficar no meio*/
+
+  /*padding: 8px 16px;*/
+}
+
+.nome-times {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  color: #ffd700; /*nome times*/
+  font-size: 7px;
+  text-transform: capitalize;
+}
+
+/*tamanho da tela (desktop mode)*/ 
+@media (min-width: 750px) {
+  #cards {
+    max-width: 1050px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
